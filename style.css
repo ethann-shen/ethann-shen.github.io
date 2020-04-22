@@ -30,39 +30,53 @@ header {
 
 nav {
     flex: 1;
+    color: black;
 }
 
 .nav-links {
     justify-content: space-evenly;
+    color: black;
 }
 
-u1 li a {
+.tabs {
     text-decoration: none;
     color: black;
     padding: 5px 20px;
-    border: 0.75px solid black;
+    border: 1px solid black;
     margin: 3px;
 }
 
-u1 li a:hover {
-    color: #0d58d9;
-    background-color: #5790f2;
+.tabs:hover {
+    color: #045a8d;
     transition: 0.5s ease;
 }
 
 .presentation {
     display: flex;
-    width: 90%;
-    margin: auto;
+    width: 70%;
+    min-height: 80vh;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover {
+    flex: 1;
+    margin: 20px;
+    height: 45vh;
+}
+
+.cover img {
+    height: 100%;
 }
 
 .introduction {
-    flex: 2;
+    flex: 1;
+    text-align: center;
 }
 
 .introduction h1 {
-    text-align: center;
+    font-size: 30px;
 }
 
 .introduction p {
@@ -70,25 +84,55 @@ u1 li a:hover {
     font-size: 16px;
 }
 
-.cover {
-    margin: 20px;
-    flex: 1;
-    height: 40vh;
+.introduction p a:link,
+.introduction p a:visited {
+    text-decoration: none;
+    color: #0570b0;
 }
 
-.cover img {
-    height: 100%;
+.introduction p a:hover {
+    color: #045a8d;
+    font-weight: 600;
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:1024px) {
     .presentation {
         flex-direction: column;
     }
     .introduction {
-        margin-top: 5vh;
         text-align: center;
+        margin: auto;
+        margin-top: -250px;
     }
     .cover img {
-        height: 80%;
+        height: 80%
+    }
+}
+
+@media screen and (max-width:800px) {
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        text-align: center;
+        margin: auto;
+        margin-top: -270px;
+    }
+    .cover img {
+        height: 75%
+    }
+}
+
+@media screen and (max-width:600px) {
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        text-align: center;
+        margin: auto;
+        margin-top: -270px;
+    }
+    .cover img {
+        height: 70%
     }
 }

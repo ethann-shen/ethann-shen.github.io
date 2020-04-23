@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Arvo', serif;
+    font-family: 'Manuale', serif;
 }
 
 header {
@@ -40,15 +40,17 @@ nav {
 
 .tabs {
     text-decoration: none;
-    color: black;
+    color: grey;
     padding: 5px 20px;
-    border: 1px solid black;
     margin: 3px;
 }
 
 .tabs:hover {
-    color: #045a8d;
-    transition: 0.5s ease;
+    color: black;
+}
+
+li.selected {
+    color: red;
 }
 
 .presentation {

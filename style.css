@@ -45,12 +45,14 @@ nav {
     margin: 3px;
 }
 
-.tabs:hover {
-    color: black;
+.nav-links .active a {
+    background: blue;
+    color: blue;
+    background-clip: text;
 }
 
-li.selected {
-    color: red;
+.nav-links a:hover {
+    color: black;
 }
 
 .presentation {

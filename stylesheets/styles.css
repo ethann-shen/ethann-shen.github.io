@@ -24,6 +24,13 @@ h2 {
     line-height: 1.1;
 }
 
+header {
+    width: 270px;
+    float: left;
+    position: fixed;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
 .name a {
     font-size: 32px;
     font-weight: 600;
@@ -41,6 +48,39 @@ h2 {
     margin: 5.5px;
 }
 
+.tab_names {
+    list-style: none;
+    height: 40px;
+    padding: 0;
+    background: #F0F0F0;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    width: 270px;
+}
+
+.nav-links {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    width: 89px;
+    float: left;
+    border-right: 1px solid #e0e0e0;
+    height: 40px;
+}
+
+.nav-links:first-child a {
+    border-radius: 5px 0 0 5px;
+}
+
+.nav-links:last-child a {
+    border-radius: 0 5px 5px 0;
+}
+
+.tab_names .nav-links+.nav-links+.nav-links {
+    border-right: none;
+    width: 89px;
+}
+
 .nav-links a {
     line-height: 1;
     font-size: 14px;
@@ -56,7 +96,7 @@ h2 {
 }
 
 .logos {
-    width: 570%;
+    width: 100%;
 }
 
 .introduction h1 {
@@ -109,41 +149,6 @@ a:hover small {
     margin: 0 auto;
 }
 
-header {
-    width: 270px;
-    float: left;
-    position: fixed;
-    -webkit-font-smoothing: subpixel-antialiased;
-}
-
-.tab_names {
-    list-style: none;
-    height: 40px;
-    padding: 0;
-    background: #F0F0F0;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
-    width: 270px;
-}
-
-.nav-links {
-    font-size: 14px;
-    display: block;
-    text-align: center;
-    width: 89px;
-    float: left;
-    border-right: 1px solid #e0e0e0;
-    height: 40px;
-}
-
-.nav-links:first-child a {
-    border-radius: 5px 0 0 5px;
-}
-
-.nav-links:last-child a {
-    border-radius: 0 5px 5px 0;
-}
-
 .logos {
     list-style: none;
     height: 40px;
@@ -158,6 +163,7 @@ header {
 
 .logo_image:hover {
     opacity: 0.5;
+    transform: scale(1.2)
 }
 
 .logo_image {
@@ -214,10 +220,16 @@ screen and (max-width: 960px) {
     header a small {
         display: inline;
     }
-    header ul {
+    .tab_names {
         position: absolute;
         right: 50px;
         top: 52px;
+    }
+    /* without this, icons would be on top of tabs*/
+    .logos {
+        position: absolute;
+        right: 50px;
+        top: 112px;
     }
 }
 
@@ -229,7 +241,8 @@ screen and (max-width: 720px) {
     header {
         padding: 0;
     }
-    header ul,
+    .tab_names,
+    .logos,
     header p.view .container {
         position: static;
     }
@@ -244,11 +257,13 @@ screen and (max-width: 480px) {
     body {
         padding: 15px;
     }
-    header ul {
+    .tab_names,
+    .logos {
         width: 99%;
     }
-    header li,
-    header ul li+li+li {
+    .nav-links,
+    .logos,
+    .tab_names li+li+li {
         width: 33%;
     }
 }
@@ -287,9 +302,11 @@ screen and (max-width: 480px) {
     bottom: 0;
     right: 0;
     opacity: 0;
+    /*
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
+    */
 }
 
 .content-image {
@@ -308,9 +325,11 @@ screen and (max-width: 480px) {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    /*
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
+    */
 }
 
 

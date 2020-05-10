@@ -31,6 +31,10 @@ h2 {
     text-decoration: none;
 }
 
+.cover img {
+    max-width: 100%;
+}
+
 .tabs {
     text-decoration: none;
     color: #393939;
@@ -47,8 +51,12 @@ h2 {
 }
 
 .nav-links a:hover {
-    color: #494949;
+    color: #232222;
     font-weight: 600;
+}
+
+.logos {
+    width: 570%;
 }
 
 .introduction h1 {
@@ -101,45 +109,6 @@ a:hover small {
     margin: 0 auto;
 }
 
-code,
-pre {
-    font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-    color: #333;
-}
-
-pre {
-    padding: 8px 15px;
-    background: #f8f8f8;
-    border-radius: 5px;
-    border: 1px solid #e5e5e5;
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th,
-td {
-    text-align: left;
-    padding: 5px 10px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-dt {
-    color: #444;
-    font-weight: 500;
-}
-
-th {
-    color: #444;
-}
-
-img {
-    max-width: 100%;
-}
-
 header {
     width: 270px;
     float: left;
@@ -147,7 +116,7 @@ header {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-header ul {
+.tab_names {
     list-style: none;
     height: 40px;
     padding: 0;
@@ -157,19 +126,42 @@ header ul {
     width: 270px;
 }
 
-header li {
+.nav-links {
+    font-size: 14px;
+    display: block;
+    text-align: center;
     width: 89px;
     float: left;
     border-right: 1px solid #e0e0e0;
     height: 40px;
 }
 
-header li:first-child a {
+.nav-links:first-child a {
     border-radius: 5px 0 0 5px;
 }
 
-header li:last-child a {
+.nav-links:last-child a {
     border-radius: 0 5px 5px 0;
+}
+
+.logos {
+    list-style: none;
+    height: 40px;
+    padding: 0;
+    width: 270px;
+    text-align: center;
+}
+
+.logos a {
+    text-decoration: none;
+}
+
+.logo_image:hover {
+    opacity: 0.5;
+}
+
+.logo_image {
+    margin: 0px 14px;
 }
 
 section {

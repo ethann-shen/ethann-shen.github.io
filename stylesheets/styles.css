@@ -144,6 +144,7 @@ header {
     height: 40px;
     padding: 0;
     width: 270px;
+    display: block;
     text-align: center;
 }
 
@@ -269,19 +270,33 @@ footer a:hover {
 
 /* makes image transparent, but keeps text opaque*/
 
-.content:hover .content-image {
-    opacity: 0.3
-}
-
-.content:hover .content-details {
+.flex-item:hover .text-block {
     opacity: 1;
 }
 
-.content-details p {
+.flex-item:hover .content-image {
+    opacity: 0.3
+}
+
+.flex-item:hover .content-details {
+    opacity: 1;
+}
+
+.content-details {
     color: black;
     font: 150%;
     text-align: center;
-    margin-top: 10px;
+}
+
+.text-block {
+    position: static;
+    text-align: center;
+    background-color: #ededed;
+    color: #232222;
+    opacity: 0;
+    font-size: 11px;
+    margin: -9px 5px 0px;
+    padding: 20px 20px 1px;
 }
 
 

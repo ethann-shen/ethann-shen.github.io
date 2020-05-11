@@ -1,7 +1,7 @@
 body {
     background-color: #f9f9f9;
     padding: 50px;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 h1 {
@@ -10,8 +10,8 @@ h1 {
 }
 
 h2 {
-    color: #252323;
-    font-weight: 500;
+    color: #292929;
+    font-weight: 600;
 }
 
 p,
@@ -106,6 +106,7 @@ header {
 .introduction p {
     margin-top: 3px;
     font-size: 14px;
+    color: #3f3b3b;
 }
 
 .introduction p a:link,
@@ -121,6 +122,7 @@ header {
 
 .liverpool p {
     font-size: 14px;
+    color: #3f3b3b;
 }
 
 .liverpool a {
@@ -130,18 +132,6 @@ header {
 
 .liverpool a:hover {
     font-weight: 600;
-}
-
-a small {
-    font-size: 15px;
-    color: #777;
-    margin-top: -0.3em;
-    display: block;
-    text-align: center;
-}
-
-a:hover small {
-    color: #777;
 }
 
 .wrapper {
@@ -173,18 +163,8 @@ a:hover small {
 section {
     width: 500px;
     float: right;
-    padding-bottom: 50px;
-}
-
-small {
-    font-size: 11px;
-}
-
-hr {
-    border: 0;
-    background: #e5e5e5;
-    height: 1px;
-    margin: 0 0 20px;
+    border: 1px solid #e5e5e5;
+    border-width: 1px 0 0 0;
 }
 
 footer {
@@ -195,106 +175,61 @@ footer {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-@media print,
-screen and (max-width: 960px) {
-    div.wrapper {
-        width: auto;
-        margin: 0;
-    }
-    header,
-    section,
-    footer {
-        float: none;
-        position: static;
-        width: auto;
-    }
-    header {
-        padding-right: 320px;
-    }
-    section {
-        border: 1px solid #e5e5e5;
-        border-width: 1px 0;
-        padding: 20px 0;
-        margin: 0 0 20px;
-    }
-    header a small {
-        display: inline;
-    }
-    .tab_names {
-        position: absolute;
-        right: 50px;
-        top: 52px;
-    }
-    /* without this, icons would be on top of tabs*/
-    .logos {
-        position: absolute;
-        right: 50px;
-        top: 112px;
-    }
+small {
+    font-size: 11px;
 }
 
-@media print,
-screen and (max-width: 720px) {
-    body {
-        word-wrap: break-word;
-    }
-    header {
-        padding: 0;
-    }
-    .tab_names,
-    .logos,
-    header p.view .container {
-        position: static;
-    }
-    pre,
-    code {
-        word-wrap: normal;
-    }
+footer a {
+    text-decoration: none;
+    color: #0570b0;
 }
 
-@media print,
-screen and (max-width: 480px) {
-    body {
-        padding: 15px;
-    }
-    .tab_names,
-    .logos {
-        width: 99%;
-    }
-    .nav-links,
-    .logos,
-    .tab_names li+li+li {
-        width: 33%;
-    }
+footer a:hover {
+    color: #045a8d;
+    font-weight: 600;
 }
 
-@media print {
-    body {
-        padding: 0.4in;
-        font-size: 12pt;
-        color: #444;
-    }
+
+/*https://css-tricks.com/almanac/properties/f/flex-wrap/ -- for project pictures */
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.flex-item {
+    width: 45%;
+    padding: 1px;
+    margin: 2px;
 }
 
 
 /* https://codepen.io/ArnaudBalland/pen/vGZKLr?editors=1100 -- for Project pictures
 */
 
-.container {
-    padding: 1em 0;
-    width: 75%;
-}
-
 .content {
     position: relative;
-    width: 90%;
     max-width: 400px;
     margin: auto;
     overflow: hidden;
+    padding: 5px;
 }
 
 .content .content-overlay {
-    position: absolute;
     height: 99%;
     width: 100%;
     left: 0;
@@ -310,12 +245,11 @@ screen and (max-width: 480px) {
 }
 
 .content-image {
-    width: 100%
+    width: 100%;
 }
 
 .content-details {
     position: absolute;
-    text-align: center;
     padding-left: 1em;
     padding-right: 1em;
     width: 100%;
@@ -345,9 +279,109 @@ screen and (max-width: 480px) {
 
 .content-details p {
     color: black;
+    font: 150%;
     text-align: center;
-    font-size: 125%;
+    margin-top: 10px;
 }
 
 
 /* makes image transparent, but keeps text opaque*/
+
+@media print,
+screen and (max-width: 960px) {
+    div.wrapper {
+        width: auto;
+        margin: 0;
+    }
+    header,
+    section,
+    footer {
+        float: none;
+        position: static;
+        width: auto;
+    }
+    header {
+        padding-right: 320px;
+    }
+    section {
+        border: 1px solid #e5e5e5;
+        border-width: 1px 0;
+        padding: 5px 0;
+        margin: 0 0 5px;
+    }
+    header a small {
+        display: inline;
+    }
+    .tab_names {
+        position: absolute;
+        right: 50px;
+        top: 52px;
+    }
+    /* without this, icons would be on top of tabs*/
+    .logos {
+        position: absolute;
+        right: 50px;
+        top: 112px;
+    }
+    .content-details p {
+        font-size: 125%;
+    }
+}
+
+@media print,
+screen and (max-width: 720px) {
+    body {
+        word-wrap: break-word;
+    }
+    header {
+        padding: 0;
+    }
+    .tab_names,
+    .logos,
+    header p.view .container {
+        position: static;
+    }
+    .cover {
+        width: 400px;
+    }
+    .content-details p {
+        font-size: 110%;
+    }
+    .flex-container {
+        display: block;
+    }
+    .flex-item {
+        width: 350px;
+    }
+    .flex-item img {
+        float: none;
+        margin: 0 15px 0 0;
+    }
+}
+
+@media print,
+screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .tab_names,
+    .logos {
+        width: 99%;
+    }
+    .nav-links,
+    .logos,
+    .tab_names li+li+li {
+        width: 33%;
+    }
+    .content-details p {
+        font-size: 100%;
+    }
+}
+
+@media print {
+    body {
+        padding: 0.4in;
+        font-size: 12pt;
+        color: #444;
+    }
+}

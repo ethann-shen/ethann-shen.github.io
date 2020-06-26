@@ -68,14 +68,6 @@ header {
     height: 40px;
 }
 
-.nav-links:first-child a {
-    border-radius: 5px 0 0 5px;
-}
-
-.nav-links:last-child a {
-    border-radius: 0 5px 5px 0;
-}
-
 .tab_names .nav-links+.nav-links+.nav-links {
     border-right: none;
     width: 89px;
@@ -90,10 +82,46 @@ header {
     text-decoration: none;
 }
 
+.nav-links:first-child a {
+    border-radius: 5px 0 0 5px;
+}
+
+.nav-links:last-child a {
+    border-radius: 0 5px 5px 0;
+}
+
 .nav-links a:hover {
     color: #232222;
     font-weight: 600;
 }
+
+
+/* use if including teaching tab 
+
+.nav-links {
+    font-size: 11px;
+    display: block;
+    text-align: center;
+    width: 66.75px;
+    float: left;
+    border-right: 1px solid #e0e0e0;
+    height: 40px;
+}
+
+.tab_names .nav-links+.nav-links+.nav-links+.nav-links {
+    border-right: none;
+    width: 66.75px;
+}
+
+.nav-links a {
+    line-height: 1;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    text-decoration: none;
+}
+*/
 
 .introduction h1 {
     font-size: 30px;
@@ -307,6 +335,30 @@ footer a:hover {
 
 /* makes image transparent, but keeps text opaque*/
 
+table {
+    font-family: 'Noto Sans', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-size: 14px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    font-size: 13px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:first-child {
+    background-color: #ededed;
+}
+
 @media print,
 screen and (max-width: 960px) {
     div.wrapper {
@@ -390,7 +442,9 @@ screen and (max-width: 480px) {
     }
     .nav-links,
     .logos,
-    .tab_names li+li+li {
+    .logo-links,
+    .logos .logo-links+.logo-links+.logo-links,
+    .tab_names .nav-links+.nav-links+.nav-links {
         width: 33%;
     }
     .content-details p {

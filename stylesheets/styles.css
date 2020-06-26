@@ -429,6 +429,10 @@ screen and (max-width: 720px) {
         float: none;
         margin: 0 15px 0 0;
     }
+    .nav-links,
+    .tab_names .nav-links+.nav-links+.nav-links {
+        width: 33%;
+    }
 }
 
 @media print,

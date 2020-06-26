@@ -444,13 +444,6 @@ screen and (max-width: 480px) {
     .logos {
         width: 99%;
     }
-    .nav-links,
-    .logos,
-    .logo-links,
-    .logos .logo-links+.logo-links+.logo-links,
-    .tab_names .nav-links+.nav-links+.nav-links {
-        width: 33%;
-    }
     .content-details p {
         font-size: 100%;
     }

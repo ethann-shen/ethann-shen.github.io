@@ -174,8 +174,11 @@ header {
 }
 
 .logo-links {
+    display: block;
+    width: 60px;
     float: left;
     margin-left: 22.5px;
+    height: 40px;
 }
 
 .logos a {
@@ -441,6 +444,13 @@ screen and (max-width: 480px) {
     .logos {
         width: 99%;
     }
+    .nav-links,
+    .logos,
+    .logo-links,
+    .logos .logo-links+.logo-links+.logo-links,
+    .tab_names .nav-links+.nav-links+.nav-links {
+        width: 33%;
+    }
     .content-details p {
         font-size: 100%;
     }
@@ -451,5 +461,25 @@ screen and (max-width: 480px) {
         padding: 0.4in;
         font-size: 12pt;
         color: #444;
+    }
+}
+
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+    body {
+        padding: 15px;
+    }
+    .tab_names,
+    .logos {
+        width: 99%;
+    }
+    .nav-links,
+    .logos,
+    .logo-links,
+    .logos .logo-links+.logo-links+.logo-links,
+    .tab_names .nav-links+.nav-links+.nav-links {
+        width: 33%;
+    }
+    .content-details p {
+        font-size: 100%;
     }
 }

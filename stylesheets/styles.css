@@ -174,11 +174,8 @@ header {
 }
 
 .logo-links {
-    display: block;
-    width: 60px;
     float: left;
     margin-left: 22.5px;
-    height: 40px;
 }
 
 .logos a {
